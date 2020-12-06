@@ -1,0 +1,14 @@
+<?php /** @var \Magento\Newsletter\Block\Subscribe $block */?>
+<div class="block newsletter">
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+           
+        </form>
+    </div>
+    <?= $block->getChildHtml(); ?>
+</div>

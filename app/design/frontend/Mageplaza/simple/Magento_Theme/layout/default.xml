@@ -1,0 +1,53 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   
+    <body>
+        <referenceBlock name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceContainer name="cms_footer_links_container">
+            <block class="Magento\Cms\Block\Block" name="footers">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footers</argument>
+                </arguments>
+            </block> 
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_cms">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer-links</argument>
+                </arguments>
+            </block>
+            
+        </referenceContainer>
+
+        <referenceBlock name="footer_links_cms">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Shipping</argument>
+                    <argument name="path" xsi:type="string">about</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="career-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Returns</argument>
+                    <argument name="path" xsi:type="string">career</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="terms-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Terms and Conditions</argument>
+                    <argument name="path" xsi:type="string">terms</argument>
+                </arguments>
+            </block>
+             <block class="Magento\Framework\View\Element\Html\Link\Current" name="Agile-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Agile Website</argument>
+                    <argument name="path" xsi:type="string">Agile Website</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <move element="privacy-policy-link" destination="footer_links_cms" />
+        
+    </body>
+</page>

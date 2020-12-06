@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="category.view.container" remove="true"/>
+        <referenceContainer name="content">
+          <container name="category-menu" before="-" >
+                <block class="Magento\Cms\Block\Block" name="category-top">
+                    <arguments>
+                    <argument name="block_id" xsi:type="string">category-top</argument>
+                    </arguments>
+               </block>
+            </container>
+           
+            <!--<block class="Magento\Cms\Block\Block" name="category-view">
+                    <arguments>
+                    <argument name="block_id" xsi:type="string">category-view</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="category-option">
+                    <arguments>
+                    <argument name="block_id" xsi:type="string">category-option</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="show-product">
+                    <arguments>
+                    <argument name="block_id" xsi:type="string">show-product</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="show-product2">
+                    <arguments>
+                    <argument name="block_id" xsi:type="string">show-product2</argument>
+                    </arguments>
+                </block> -->
+        </referenceContainer>
+          <move element="catalog.leftnav" destination="content" after="category-menu" />  
+    </body>
+</page>
