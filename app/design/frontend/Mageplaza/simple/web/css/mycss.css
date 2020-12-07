@@ -774,6 +774,12 @@ p {
 .swatch-attribute-options.clearfix {
      margin: 0px !important; 
 }
+.modes, .toolbar-amount {
+    display: none !important;
+}
+.page-products .product-item-info {
+    width: 260px !important;
+}
 @media (max-width: 767px)
 {
 body {
@@ -846,4 +852,9 @@ body {
     .page-layout-1column .filter-options-item {
         margin-right: 0px !important;
     }
+}
+@media (min-width: 1024px){
+.page-products .products-grid .product-item {
+    padding : 0px !important
+}
 }
